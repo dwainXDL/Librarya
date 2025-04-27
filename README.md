@@ -1,5 +1,7 @@
 # Librarya
 
+![Logo](https://i.imgur.com/UUt0Zpg.png)
+
 A Library Management System for an assignment @NSBM Green University
 
 ## Authors
@@ -16,5 +18,3 @@ A Library Management System for an assignment @NSBM Green University
 ```bash
   git clone https://github.com/dwainXDL/Librarya
 ```
-
-![Logo](https://imgur.com/a/d8XRDl6)
