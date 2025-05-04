@@ -102,13 +102,7 @@
     <Content Include="Assets\Logo.png" />
     <None Include="Resources\minimize-removebg-preview1.png" />
     <None Include="Resources\x-removebg-preview1.png" />
-    <None Include="Resources\minimize-removebg-preview.png" />
-    <None Include="Resources\x-removebg-preview.png" />
     <None Include="Resources\Screenshot_2025-05-04_073637-removebg-preview.png" />
-    <None Include="Resources\pngtree-arrow-left-flat-brown-color-icon-arrow-navigation-aiming-vector-png-image_19939516.png" />
-    <None Include="Resources\images__1_-removebg-preview.png" />
-    <None Include="Resources\images-removebg-preview.png" />
-    <None Include="Resources\icone-fermer-et-x-noir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
