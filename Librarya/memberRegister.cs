@@ -63,9 +63,15 @@ namespace Librarya
                                     enterFn.Parameters.AddWithValue("@phoneNo", textBox4.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@dateRegistered", currentDate.ToString());
 
-                                    enterFn.ExecuteNonQuery();
-
-                                    MessageBox.Show("Added Member Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    if (textBox3.Text.Trim().Contains("@"))
+                                    {
+                                        enterFn.ExecuteNonQuery();
+                                        MessageBox.Show("Added Member Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Invalid email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
                                 }
                             }
                         }
@@ -88,8 +94,8 @@ namespace Librarya
         // Back arrow - to login form
         private void backArrow_Click(object sender, EventArgs e)
         {
-            loginForm logForm = new loginForm();
-            logForm.Show();
+            loginForm login = new loginForm();
+            login.Show();
             this.Hide();
         }
 

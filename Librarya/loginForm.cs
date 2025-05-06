@@ -20,6 +20,14 @@ namespace Librarya
             InitializeComponent();
         }
 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true; // Block the input
+            }
+        }
+
         // login button
         private void button1_Click(object sender, EventArgs e)
         {
@@ -48,7 +56,15 @@ namespace Librarya
 
                             if(tempTable.Rows.Count == 1)
                             {
-                                MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Login Successful!\n\n" + "Welcome!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                homeForm home = new homeForm();
+                                home.Show();
+                                this.Hide();
+                            }
+                            else if (tempTable.Rows.Count > 1)
+                            {
+                                MessageBox.Show("Many users with similar info \n\n" + "Database Error!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
@@ -85,8 +101,8 @@ namespace Librarya
         // Register button
         private void button2_Click(object sender, EventArgs e)
         {
-            memberRegister memberForm = new memberRegister();
-            memberForm.Show();
+            memberRegister member = new memberRegister();
+            member.Show();
             this.Hide();
         }
 
@@ -129,7 +145,9 @@ namespace Librarya
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
+
+        
     }
 }

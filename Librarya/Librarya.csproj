@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="homeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="homeForm.Designer.cs">
+      <DependentUpon>homeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="loadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="memberRegister.Designer.cs">
       <DependentUpon>memberRegister.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="homeForm.resx">
+      <DependentUpon>homeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loadingForm.resx">
       <DependentUpon>loadingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +110,14 @@
   <ItemGroup>
     <Content Include="Assets\Logo.png" />
     <None Include="Resources\Logo1.png" />
+    <None Include="Resources\Screenshot 2025-05-06 145352.png" />
+    <None Include="Resources\pngtree-book-logo-template-design-study-shape-vector-png-image_12526904-removebg-preview.png" />
+    <None Include="Resources\czech-this-beautiful-of-return-book-in-editable-style-vector-removebg-preview.png" />
+    <None Include="Resources\imageedit_2_4919993684.png" />
+    <None Include="Resources\imageedit_5_9276175019.png" />
+    <None Include="Resources\imageedit_7_5371664742.png" />
+    <None Include="Resources\imageedit_9_8942479594.png" />
+    <None Include="Resources\imageedit_11_2751666342.png" />
     <Content Include="Resources\x-removebg-preview1.png" />
     <None Include="Resources\minimize-removebg-preview1.png" />
     <None Include="Resources\Screenshot_2025-05-04_073637-removebg-preview.png" />
