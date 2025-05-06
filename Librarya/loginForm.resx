@@ -186,6 +186,9 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inknut Antiqua, 9.749998pt</value>
+  </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 220</value>
   </data>
@@ -242,6 +245,9 @@
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="textBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Inknut Antiqua, 9.749998pt</value>
   </data>
   <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 310</value>
