@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addForm.Designer.cs">
+      <DependentUpon>addForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="detailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detailForm.Designer.cs">
+      <DependentUpon>detailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="homeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="homeForm.Designer.cs">
       <DependentUpon>homeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="issueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="issueForm.Designer.cs">
+      <DependentUpon>issueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="issueTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="issueTable.Designer.cs">
+      <DependentUpon>issueTable.cs</DependentUpon>
     </Compile>
     <Compile Include="loadingForm.cs">
       <SubType>Form</SubType>
@@ -64,6 +88,12 @@
     <Compile Include="loginForm.Designer.cs">
       <DependentUpon>loginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="memberTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="memberTable.Designer.cs">
+      <DependentUpon>memberTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="memberRegister.cs">
@@ -72,14 +102,41 @@
     <Compile Include="memberRegister.Designer.cs">
       <DependentUpon>memberRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="returnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="returnForm.Designer.cs">
+      <DependentUpon>returnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="returnTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="returnTable.Designer.cs">
+      <DependentUpon>returnTable.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addForm.resx">
+      <DependentUpon>addForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detailForm.resx">
+      <DependentUpon>detailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="homeForm.resx">
       <DependentUpon>homeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issueForm.resx">
+      <DependentUpon>issueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="issueTable.resx">
+      <DependentUpon>issueTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loadingForm.resx">
       <DependentUpon>loadingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="memberTable.resx">
+      <DependentUpon>memberTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="memberRegister.resx">
       <DependentUpon>memberRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="returnForm.resx">
+      <DependentUpon>returnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="returnTable.resx">
+      <DependentUpon>returnTable.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
