@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,60 @@ namespace Librarya
 {
     public partial class loginForm : Form
     {
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\perso\OneDrive\Documents\libraryaDB.mdf;Integrated Security=True;Connect Timeout=30");
+
         public loginForm()
         {
             InitializeComponent();
+        }
+
+        // login button
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || textBox2.Text == "")
+            {
+                MessageBox.Show("Fill all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        String userData = "SELECT * FROM users WHERE username = @username AND password = @password";
+
+                        using(SqlCommand dataCMD = new SqlCommand(userData, connection))
+                        {
+                            dataCMD.Parameters.AddWithValue("@username", textBox1.Text.Trim());
+                            dataCMD.Parameters.AddWithValue("@password", textBox2.Text.Trim());
+
+                            SqlDataAdapter adapter = new SqlDataAdapter(dataCMD);
+                            DataTable tempTable = new DataTable();
+                            adapter.Fill(tempTable);
+
+                            if(tempTable.Rows.Count == 1)
+                            {
+                                MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    catch (Exception x)
+                    {
+                        MessageBox.Show("Connecting to database failed\n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Console.WriteLine(x);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+            }
         }
 
         // Show password checkbox
@@ -71,6 +123,11 @@ namespace Librarya
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
