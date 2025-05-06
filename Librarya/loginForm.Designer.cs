@@ -100,6 +100,7 @@
             // checkBox1
             // 
             resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -115,13 +116,15 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Librarya.Properties.Resources.Logo;
+            this.pictureBox3.Image = global::Librarya.Properties.Resources.Logo1;
             resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox2.Image = global::Librarya.Properties.Resources.minimize_removebg_preview1;
             resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
@@ -130,6 +133,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox1.Image = global::Librarya.Properties.Resources.x_removebg_preview1;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";

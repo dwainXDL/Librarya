@@ -63,49 +63,9 @@ namespace Librarya.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icone_fermer_et_x_noir {
+        internal static System.Drawing.Bitmap Logo1 {
             get {
-                object obj = ResourceManager.GetObject("icone-fermer-et-x-noir", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap images__1__removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("images__1_-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap images_removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("images-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Logo {
-            get {
-                object obj = ResourceManager.GetObject("Logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap minimize_removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("minimize-removebg-preview", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,30 +83,9 @@ namespace Librarya.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pngtree_arrow_left_flat_brown_color_icon_arrow_navigation_aiming_vector_png_image_19939516 {
-            get {
-                object obj = ResourceManager.GetObject("pngtree-arrow-left-flat-brown-color-icon-arrow-navigation-aiming-vector-png-image" +
-                        "_19939516", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2025_05_04_073637_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Screenshot_2025-05-04_073637-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap x_removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("x-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

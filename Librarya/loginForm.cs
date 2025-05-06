@@ -39,7 +39,9 @@ namespace Librarya
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            memberRegister memberForm = new memberRegister();
+            memberForm.Show();
+            this.Hide();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -57,5 +59,9 @@ namespace Librarya
 
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

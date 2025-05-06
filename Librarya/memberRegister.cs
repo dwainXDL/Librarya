@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Librarya
 {
@@ -35,6 +36,23 @@ namespace Librarya
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backArrow_Click(object sender, EventArgs e)
+        {
+            loginForm logForm = new loginForm();
+            logForm.Show();
+            this.Hide();
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Librarya
                 login.Show();
                 this.Hide();
                 */
-                memberRegister login = new memberRegister();
+                loginForm login = new loginForm();
                 login.Show();
                 this.Hide();
 
