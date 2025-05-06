@@ -17,11 +17,34 @@ namespace Librarya
             InitializeComponent();
         }
 
+        // Show password checkbox
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.PasswordChar = '\0';
+            }
+            else
+            {
+                textBox2.PasswordChar = '*';
+            }
+        }
+
+        // Register button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            memberRegister memberForm = new memberRegister();
+            memberForm.Show();
+            this.Hide();
+        }
+
+        // X button
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        // Minimize button
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -33,18 +56,6 @@ namespace Librarya
         }
 
         private void loginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            memberRegister memberForm = new memberRegister();
-            memberForm.Show();
-            this.Hide();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

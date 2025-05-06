@@ -45,10 +45,12 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.backArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -70,10 +72,10 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.textBox2.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(19, 250);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(258, 38);
             this.textBox2.TabIndex = 18;
             // 
@@ -93,11 +95,13 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.textBox1.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(19, 178);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(258, 38);
             this.textBox1.TabIndex = 16;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -107,9 +111,9 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(12, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 39);
+            this.label2.Size = new System.Drawing.Size(65, 39);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Username";
+            this.label2.Text = "Name";
             // 
             // backArrow
             // 
@@ -200,10 +204,10 @@
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.textBox3.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(19, 323);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(258, 38);
             this.textBox3.TabIndex = 29;
             // 
@@ -222,11 +226,11 @@
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.textBox4.Location = new System.Drawing.Point(19, 398);
+            this.textBox4.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(78, 398);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(258, 38);
+            this.textBox4.Size = new System.Drawing.Size(199, 38);
             this.textBox4.TabIndex = 31;
             // 
             // panel1
@@ -244,11 +248,21 @@
             this.label7.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(24, 400);
+            this.label7.Location = new System.Drawing.Point(6, 3);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 33);
             this.label7.TabIndex = 33;
             this.label7.Text = "+94";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Location = new System.Drawing.Point(19, 398);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(51, 38);
+            this.panel2.TabIndex = 33;
             // 
             // memberRegister
             // 
@@ -256,10 +270,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(177)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(300, 550);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
@@ -273,6 +285,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label6);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "memberRegister";
@@ -282,6 +296,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +321,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel2;
     }
 }
