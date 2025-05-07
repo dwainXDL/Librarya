@@ -98,14 +98,6 @@ namespace Librarya
             }
         }
 
-        // Register button
-        private void button2_Click(object sender, EventArgs e)
-        {
-            memberRegister member = new memberRegister();
-            member.Show();
-            this.Hide();
-        }
-
         // X button
         private void pictureBox1_Click(object sender, EventArgs e)
         {

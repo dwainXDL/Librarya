@@ -17,6 +17,75 @@ namespace Librarya
             InitializeComponent();
         }
 
+        // Home button
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            homeForm home = new homeForm();
+            home.Show();
+            this.Hide();
+        }
+
+        // Members button
+        private void label6_Click(object sender, EventArgs e)
+        {
+            memberTable member = new memberTable();
+            member.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            memberTable member = new memberTable();
+            member.Show();
+            this.Hide();
+        }
+
+        // Issue button
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            issueTable issue = new issueTable();
+            issue.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            issueTable issue = new issueTable();
+            issue.Show();
+            this.Hide();
+        }
+
+        // Return button
+        private void label3_Click(object sender, EventArgs e)
+        {
+            returnTable returnT = new returnTable();
+            returnT.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            returnTable returnT = new returnTable();
+            returnT.Show();
+            this.Hide();
+        }
+
+        // Book button
+        private void label2_Click(object sender, EventArgs e)
+        {
+            bookTable book = new bookTable();
+            book.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bookTable book = new bookTable();
+            book.Show();
+            this.Hide();
+        }
+
         // Logout button
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -43,21 +112,6 @@ namespace Librarya
         }
 
         private void homeForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
         {
 
         }
