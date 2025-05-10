@@ -47,9 +47,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,8 +54,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.backArrow = new System.Windows.Forms.PictureBox();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,7 +70,7 @@
             this.label4.Font = new System.Drawing.Font("Inknut Antiqua", 14.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(207, 6);
+            this.label4.Location = new System.Drawing.Point(209, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 49);
             this.label4.TabIndex = 38;
@@ -104,7 +100,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.textBox1.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F);
-            this.textBox1.Location = new System.Drawing.Point(60, 151);
+            this.textBox1.Location = new System.Drawing.Point(50, 133);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(315, 38);
@@ -116,17 +112,17 @@
             this.label2.Font = new System.Drawing.Font("Inknut Antiqua", 11.25F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(53, 109);
+            this.label2.Location = new System.Drawing.Point(43, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 39);
+            this.label2.Size = new System.Drawing.Size(72, 39);
             this.label2.TabIndex = 42;
-            this.label2.Text = "Title";
+            this.label2.Text = "Title *";
             // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.textBox2.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F);
-            this.textBox2.Location = new System.Drawing.Point(533, 151);
+            this.textBox2.Location = new System.Drawing.Point(533, 133);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(315, 38);
@@ -138,11 +134,11 @@
             this.label3.Font = new System.Drawing.Font("Inknut Antiqua", 11.25F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(526, 109);
+            this.label3.Location = new System.Drawing.Point(526, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 39);
+            this.label3.Size = new System.Drawing.Size(89, 39);
             this.label3.TabIndex = 44;
-            this.label3.Text = "Author";
+            this.label3.Text = "Author *";
             // 
             // label5
             // 
@@ -150,7 +146,7 @@
             this.label5.Font = new System.Drawing.Font("Inknut Antiqua", 11.25F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(965, 109);
+            this.label5.Location = new System.Drawing.Point(965, 91);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 39);
             this.label5.TabIndex = 46;
@@ -162,11 +158,11 @@
             this.label6.Font = new System.Drawing.Font("Inknut Antiqua", 11.25F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(53, 306);
+            this.label6.Location = new System.Drawing.Point(43, 309);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 39);
+            this.label6.Size = new System.Drawing.Size(112, 39);
             this.label6.TabIndex = 48;
-            this.label6.Text = "Language";
+            this.label6.Text = "Language *";
             // 
             // textBox5
             // 
@@ -177,6 +173,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(315, 38);
             this.textBox5.TabIndex = 51;
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // label7
             // 
@@ -194,7 +191,7 @@
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.textBox6.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F);
-            this.textBox6.Location = new System.Drawing.Point(972, 345);
+            this.textBox6.Location = new System.Drawing.Point(972, 348);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(315, 38);
@@ -208,18 +205,18 @@
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label8.Location = new System.Drawing.Point(965, 306);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 39);
+            this.label8.Size = new System.Drawing.Size(74, 39);
             this.label8.TabIndex = 52;
-            this.label8.Text = "ISBN";
+            this.label8.Text = "ISBN *";
             // 
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.textBox8.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F);
-            this.textBox8.Location = new System.Drawing.Point(60, 534);
+            this.textBox8.Location = new System.Drawing.Point(50, 534);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(315, 109);
+            this.textBox8.Size = new System.Drawing.Size(798, 116);
             this.textBox8.TabIndex = 57;
             // 
             // label10
@@ -228,7 +225,7 @@
             this.label10.Font = new System.Drawing.Font("Inknut Antiqua", 11.25F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(53, 492);
+            this.label10.Location = new System.Drawing.Point(43, 492);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 39);
             this.label10.TabIndex = 56;
@@ -242,12 +239,13 @@
             this.button1.Font = new System.Drawing.Font("Inknut Antiqua", 8.25F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(580, 680);
+            this.button1.Location = new System.Drawing.Point(597, 697);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(219, 77);
+            this.button1.Size = new System.Drawing.Size(202, 60);
             this.button1.TabIndex = 58;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -257,12 +255,13 @@
             this.button2.Font = new System.Drawing.Font("Inknut Antiqua", 8.25F);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(1049, 733);
+            this.button2.Location = new System.Drawing.Point(1062, 707);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 36);
+            this.button2.Size = new System.Drawing.Size(149, 43);
             this.button2.TabIndex = 60;
             this.button2.Text = "Insert";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label11
             // 
@@ -270,11 +269,11 @@
             this.label11.Font = new System.Drawing.Font("Inknut Antiqua", 11.25F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(1099, 492);
+            this.label11.Location = new System.Drawing.Point(1102, 412);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 39);
+            this.label11.Size = new System.Drawing.Size(80, 39);
             this.label11.TabIndex = 61;
-            this.label11.Text = "Cover";
+            this.label11.Text = "Cover *";
             // 
             // button3
             // 
@@ -284,58 +283,56 @@
             this.button3.Font = new System.Drawing.Font("Inknut Antiqua", 8.25F);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(144, 712);
+            this.button3.Location = new System.Drawing.Point(130, 707);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(146, 41);
             this.button3.TabIndex = 62;
             this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.comboBox2.Cursor = System.Windows.Forms.Cursors.PanNorth;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(0, 14);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(315, 21);
-            this.comboBox2.TabIndex = 65;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Location = new System.Drawing.Point(61, 348);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 38);
-            this.panel2.TabIndex = 66;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.panel3.Controls.Add(this.comboBox3);
-            this.panel3.Location = new System.Drawing.Point(972, 151);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(315, 38);
-            this.panel3.TabIndex = 67;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // comboBox3
             // 
             this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.comboBox3.Cursor = System.Windows.Forms.Cursors.PanNorth;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox3.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(0, 14);
+            this.comboBox3.Items.AddRange(new object[] {
+            "Fiction",
+            "Mystery & Thriller",
+            "Science Fiction",
+            "Fantasy",
+            "Romance",
+            "Historical Fiction",
+            "Horror",
+            "Crime",
+            "Biography & Memoir",
+            "Self-Help & Personal Development",
+            "Business & Economics",
+            "Science & Technology",
+            "Health & Fitness",
+            "Art & Photography",
+            "Travel",
+            "Cooking & Food",
+            "Religion & Spirituality",
+            "Poetry",
+            "Children’s",
+            "Young Adult",
+            "Graphic Novels & Comics"});
+            this.comboBox3.Location = new System.Drawing.Point(972, 130);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(315, 21);
+            this.comboBox3.Size = new System.Drawing.Size(315, 41);
             this.comboBox3.TabIndex = 65;
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(1049, 531);
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.pictureBox5.Location = new System.Drawing.Point(1050, 454);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(175, 202);
+            this.pictureBox5.Size = new System.Drawing.Size(175, 232);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 59;
             this.pictureBox5.TabStop = false;
             // 
@@ -344,42 +341,45 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox1.Image = global::Librarya.Properties.Resources.Screenshot_2025_05_06_145352;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(1235, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(1237, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox2.Image = global::Librarya.Properties.Resources.minimize_removebg_preview1;
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(1274, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(1277, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox4.Image = global::Librarya.Properties.Resources.x_removebg_preview1;
             this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox4.Location = new System.Drawing.Point(1310, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(1313, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(39, 28);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 39;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Librarya.Properties.Resources.Logo1;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(52, 51);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -390,12 +390,29 @@
             // 
             this.backArrow.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.backArrow.Image = global::Librarya.Properties.Resources.Screenshot_2025_05_04_073637_removebg_preview;
-            this.backArrow.Location = new System.Drawing.Point(1, 770);
+            this.backArrow.Location = new System.Drawing.Point(0, 770);
             this.backArrow.Name = "backArrow";
             this.backArrow.Size = new System.Drawing.Size(34, 30);
             this.backArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.backArrow.TabIndex = 68;
             this.backArrow.TabStop = false;
+            this.backArrow.Click += new System.EventHandler(this.backArrow_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.comboBox2.Cursor = System.Windows.Forms.Cursors.PanNorth;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Inknut Antiqua", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "English",
+            "Sinhala"});
+            this.comboBox2.Location = new System.Drawing.Point(50, 351);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(315, 37);
+            this.comboBox2.TabIndex = 65;
             // 
             // addForm
             // 
@@ -403,8 +420,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(177)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(1350, 800);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.backArrow);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button2);
@@ -429,14 +447,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(177)))), ((int)(((byte)(135)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "add";
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -474,10 +489,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.PictureBox backArrow;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

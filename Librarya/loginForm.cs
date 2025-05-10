@@ -13,13 +13,14 @@ namespace Librarya
 {
     public partial class loginForm : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\perso\OneDrive\Documents\libraryaDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
 
         public loginForm()
         {
             InitializeComponent();
         }
 
+        // Only letters and backspace allowed
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
@@ -33,7 +34,7 @@ namespace Librarya
         {
             if (textBox1.Text == "" || textBox2.Text == "")
             {
-                MessageBox.Show("Fill all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Fill all required * fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

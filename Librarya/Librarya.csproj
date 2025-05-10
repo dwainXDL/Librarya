@@ -32,7 +32,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +59,7 @@
     <Compile Include="addForm.Designer.cs">
       <DependentUpon>addForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="booksData.cs" />
     <Compile Include="bookTable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +169,7 @@
     <EmbeddedResource Include="returnTable.resx">
       <DependentUpon>returnTable.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -190,6 +199,8 @@
     <None Include="Resources\imageedit_7_5371664742.png" />
     <None Include="Resources\imageedit_9_8942479594.png" />
     <None Include="Resources\imageedit_11_2751666342.png" />
+    <Content Include="Logo.ico" />
+    <Content Include="Resources\Icon.ico" />
     <Content Include="Resources\x-removebg-preview1.png" />
     <None Include="Resources\minimize-removebg-preview1.png" />
     <None Include="Resources\Screenshot_2025-05-04_073637-removebg-preview.png" />

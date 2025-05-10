@@ -55,20 +55,18 @@
             this.label1.Font = new System.Drawing.Font("Inknut Antiqua Black", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(75, -8);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(50, -5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 93);
+            this.label1.Size = new System.Drawing.Size(151, 62);
             this.label1.TabIndex = 10;
             this.label1.Text = "Librarya";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
-            this.panel1.Location = new System.Drawing.Point(293, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(195, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(15, 75);
+            this.panel1.Size = new System.Drawing.Size(10, 49);
             this.panel1.TabIndex = 33;
             // 
             // label4
@@ -78,10 +76,9 @@
             this.label4.Font = new System.Drawing.Font("Inknut Antiqua", 14.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(309, 5);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(206, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 74);
+            this.label4.Size = new System.Drawing.Size(87, 49);
             this.label4.TabIndex = 34;
             this.label4.Text = "Home";
             // 
@@ -91,10 +88,9 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(91)))), ((int)(((byte)(86)))));
             this.label2.Font = new System.Drawing.Font("Inknut Antiqua Medium", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.label2.Location = new System.Drawing.Point(1794, 165);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(1196, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 136);
+            this.label2.Size = new System.Drawing.Size(57, 91);
             this.label2.TabIndex = 39;
             this.label2.Text = "1";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -105,10 +101,9 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(91)))), ((int)(((byte)(86)))));
             this.label3.Font = new System.Drawing.Font("Inknut Antiqua Medium", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.label3.Location = new System.Drawing.Point(1794, 431);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(1196, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 136);
+            this.label3.Size = new System.Drawing.Size(57, 91);
             this.label3.TabIndex = 40;
             this.label3.Text = "1";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -119,10 +114,9 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(91)))), ((int)(((byte)(86)))));
             this.label5.Font = new System.Drawing.Font("Inknut Antiqua Medium", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.label5.Location = new System.Drawing.Point(1794, 703);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(1196, 457);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 136);
+            this.label5.Size = new System.Drawing.Size(57, 91);
             this.label5.TabIndex = 41;
             this.label5.Text = "1";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -133,10 +127,9 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(91)))), ((int)(((byte)(86)))));
             this.label6.Font = new System.Drawing.Font("Inknut Antiqua Medium", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.label6.Location = new System.Drawing.Point(1794, 985);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(1196, 640);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 136);
+            this.label6.Size = new System.Drawing.Size(57, 91);
             this.label6.TabIndex = 42;
             this.label6.Text = "1";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -148,10 +141,9 @@
             this.button4.Font = new System.Drawing.Font("Inknut Antiqua SemiBold", 24F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.button4.Image = global::Librarya.Properties.Resources.imageedit_9_8942479594;
-            this.button4.Location = new System.Drawing.Point(86, 957);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button4.Location = new System.Drawing.Point(57, 622);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(1854, 200);
+            this.button4.Size = new System.Drawing.Size(1236, 130);
             this.button4.TabIndex = 38;
             this.button4.Text = "Members";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,10 +157,9 @@
             this.button3.Font = new System.Drawing.Font("Inknut Antiqua SemiBold", 24F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.button3.Image = global::Librarya.Properties.Resources.imageedit_11_2751666342;
-            this.button3.Location = new System.Drawing.Point(86, 675);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Location = new System.Drawing.Point(57, 439);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(1854, 200);
+            this.button3.Size = new System.Drawing.Size(1236, 130);
             this.button3.TabIndex = 37;
             this.button3.Text = "Issues";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -183,10 +174,9 @@
             this.button2.Font = new System.Drawing.Font("Inknut Antiqua SemiBold", 24F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.button2.Image = global::Librarya.Properties.Resources.imageedit_5_9276175019;
-            this.button2.Location = new System.Drawing.Point(86, 403);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(57, 262);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(1854, 200);
+            this.button2.Size = new System.Drawing.Size(1236, 130);
             this.button2.TabIndex = 36;
             this.button2.Text = "Returns";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,10 +187,9 @@
             // 
             this.pictureBox3.Image = global::Librarya.Properties.Resources.Logo1;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(-1, -3);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(-1, -2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(78, 78);
+            this.pictureBox3.Size = new System.Drawing.Size(52, 51);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
@@ -211,10 +200,9 @@
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox1.Image = global::Librarya.Properties.Resources.Screenshot_2025_05_06_145352;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(1855, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(1237, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 57);
+            this.pictureBox1.Size = new System.Drawing.Size(39, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -225,10 +213,9 @@
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox2.Image = global::Librarya.Properties.Resources.minimize_removebg_preview1;
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(1914, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(1276, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(54, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(36, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -239,10 +226,9 @@
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox4.Image = global::Librarya.Properties.Resources.x_removebg_preview1;
             this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox4.Location = new System.Drawing.Point(1968, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(1312, 1);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(58, 43);
+            this.pictureBox4.Size = new System.Drawing.Size(39, 28);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
@@ -255,10 +241,9 @@
             this.button1.Font = new System.Drawing.Font("Inknut Antiqua SemiBold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.button1.Image = global::Librarya.Properties.Resources.imageedit_2_4919993684;
-            this.button1.Location = new System.Drawing.Point(86, 137);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(57, 89);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(1854, 200);
+            this.button1.Size = new System.Drawing.Size(1236, 130);
             this.button1.TabIndex = 35;
             this.button1.Text = "Books";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -267,11 +252,11 @@
             // 
             // homeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(177)))), ((int)(((byte)(135)))));
-            this.ClientSize = new System.Drawing.Size(2025, 1231);
+            this.ClientSize = new System.Drawing.Size(1350, 800);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -288,7 +273,6 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "homeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "homeForm";

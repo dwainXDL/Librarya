@@ -17,7 +17,7 @@ namespace Librarya
     {
 
         // SQL connection 
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\perso\OneDrive\Documents\libraryaDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
 
         public memberRegister()
         {
@@ -28,7 +28,7 @@ namespace Librarya
         {
             if (textBox3.Text == "" || textBox1.Text == "" || textBox2.Text == "")
             {
-                MessageBox.Show("Fill all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Fill all required * fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
             else
             {
