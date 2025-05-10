@@ -59,7 +59,7 @@
     <Compile Include="addForm.Designer.cs">
       <DependentUpon>addForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="booksData.cs" />
+    <Compile Include="Classes\booksData.cs" />
     <Compile Include="bookTable.cs">
       <SubType>Form</SubType>
     </Compile>

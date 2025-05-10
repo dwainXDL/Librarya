@@ -171,6 +171,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(1266, 550);
             this.dataGridView1.TabIndex = 50;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
             // 
             // button2
@@ -187,6 +188,7 @@
             this.button2.TabIndex = 62;
             this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 

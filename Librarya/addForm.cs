@@ -26,6 +26,13 @@ namespace Librarya
             InitializeComponent();
         }
 
+        //// Parsing text fields
+        //public string titleText
+        //{
+        //    get => textBox1.Text;
+        //    set => textBox1.Text = value;
+        //}
+
         // Clear fields class
         public void clearField()
         {
@@ -97,6 +104,7 @@ namespace Librarya
                             cmd.ExecuteNonQuery();
 
                             MessageBox.Show("Book Added Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            
                             clearField();
                         }
                     }
