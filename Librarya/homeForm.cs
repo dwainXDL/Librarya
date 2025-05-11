@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,98 @@ namespace Librarya
 {
     public partial class homeForm : Form
     {
+        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
+
         public homeForm()
         {
             InitializeComponent();
+
+            // On run
+            bookCountLabel();
+            issueCountLabel();
+            memberCountLabel();
+        }
+
+        // Database record count updates
+        private void bookCountLabel()
+        {
+            string countData = "SELECT COUNT(*) FROM books";
+
+            if(connection.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(countData, connection))
+                    {
+                        int count = (int)cmd.ExecuteScalar();
+                        label2.Text = count.ToString();
+                    }
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("Database error: \n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        private void issueCountLabel()
+        {
+            string countData = "SELECT COUNT(*) FROM issues";
+
+            if (connection.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(countData, connection))
+                    {
+                        int count = (int)cmd.ExecuteScalar();
+                        label5.Text = count.ToString();
+                    }
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("Database error: \n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        private void memberCountLabel()
+        {
+            string countData = "SELECT COUNT(*) FROM members";
+
+            if (connection.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(countData, connection))
+                    {
+                        int count = (int)cmd.ExecuteScalar();
+                        label6.Text = count.ToString();
+                    }
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("Database error: \n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
         }
 
         // Home button

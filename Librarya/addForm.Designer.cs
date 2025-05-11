@@ -390,9 +390,9 @@
             // 
             this.backArrow.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.backArrow.Image = global::Librarya.Properties.Resources.Screenshot_2025_05_04_073637_removebg_preview;
-            this.backArrow.Location = new System.Drawing.Point(0, 770);
+            this.backArrow.Location = new System.Drawing.Point(0, 748);
             this.backArrow.Name = "backArrow";
-            this.backArrow.Size = new System.Drawing.Size(34, 30);
+            this.backArrow.Size = new System.Drawing.Size(73, 52);
             this.backArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.backArrow.TabIndex = 68;
             this.backArrow.TabStop = false;
