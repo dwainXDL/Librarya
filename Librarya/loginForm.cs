@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Librarya.Classes;
 
 namespace Librarya
 {
@@ -58,6 +59,8 @@ namespace Librarya
                             if(tempTable.Rows.Count == 1)
                             {
                                 MessageBox.Show("Login Successful!\n\n" + "Welcome!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                session.user = textBox1.Text.Trim();
 
                                 homeForm home = new homeForm();
                                 home.Show();

@@ -98,7 +98,7 @@ namespace Librarya
                 }
                 catch (Exception x)
                 {
-                    MessageBox.Show("Database error: \n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Database error: homeForm.cs\n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {

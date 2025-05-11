@@ -80,7 +80,7 @@ namespace Librarya
                     }
                     catch(Exception x)
                     {
-                        MessageBox.Show("Connecting to database failed\n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Database error: memberRegister.cs\n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Console.WriteLine(x);
                     }
                     finally
@@ -94,8 +94,7 @@ namespace Librarya
         // Back arrow - to login form
         private void backArrow_Click(object sender, EventArgs e)
         {
-            loginForm login = new loginForm();
-            login.Show();
+            new memberTable().Show();
             this.Hide();
         }
 

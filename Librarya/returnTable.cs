@@ -16,5 +16,32 @@ namespace Librarya
         {
             InitializeComponent();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DialogResult logoutCheck = MessageBox.Show("Do you want to logout?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (logoutCheck == DialogResult.Yes)
+            {
+                new loginForm().Show();
+                this.Hide();
+            }
+        }
+
+        private void backArrow_Click(object sender, EventArgs e)
+        {
+            new homeForm().Show();
+            this.Hide();
+        }
     }
 }

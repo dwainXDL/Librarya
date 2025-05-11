@@ -66,6 +66,9 @@
     <Compile Include="bookTable.Designer.cs">
       <DependentUpon>bookTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\issuesData.cs" />
+    <Compile Include="Classes\membersData.cs" />
+    <Compile Include="Classes\session.cs" />
     <Compile Include="detailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +207,9 @@
     <Content Include="Resources\x-removebg-preview1.png" />
     <None Include="Resources\minimize-removebg-preview1.png" />
     <None Include="Resources\Screenshot_2025-05-04_073637-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Secrets\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

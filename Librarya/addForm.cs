@@ -10,16 +10,24 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using Newtonsoft.Json.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.IO;
 
 namespace Librarya
 {
     public partial class addForm : Form
     {
-
         SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
+
+        private string loadSecrets()
+        {
+            return File.ReadAllText(@"D:\Work\Uni\NSBM\C# Assignment\Librarya\Librarya\Librarya\Secrets\imgur.secret".Trim());
+        }
 
         // Global image path
         private string imgPath = "";
+        private string imgURL = null;
 
         public addForm()
         {
@@ -44,6 +52,7 @@ namespace Librarya
             textBox6.Text = "";
             textBox8.Text = "";
             pictureBox5.Image = null;
+            imgPath = "";
         }
 
         // Clear button
@@ -68,14 +77,14 @@ namespace Librarya
             }
             catch (Exception x)
             {
-                MessageBox.Show("Error: " + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error selecting image:\n\n " + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         // Add button
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            if(pictureBox5.Image == null || textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "" || textBox6.Text == "")
+            if(imgPath == null || textBox1.Text == "" || textBox2.Text == "" || comboBox2.Text == "" || textBox6.Text == "")
             {
                 MessageBox.Show("Please fill required * fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -85,13 +94,23 @@ namespace Librarya
                 {
                     try
                     {
+                        // Upload to Imgur and await URL
+                        imgURL = await uploadImgAsync(imgPath);
+                    }
+                    catch (Exception x)
+                    {
+                        MessageBox.Show("Upload error: \n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    try
+                    {
                         DateTime today = DateTime.Today;
                         connection.Open();
                         string insertData = "INSERT INTO books " + "(cover, title, author, category, language, publishedYear, isbn, description, dateAdded) " + "VALUES(@cover, @title, @author, @category, @language, @publishedYear, @isbn, @description, @dateAdded)";
 
                         using (SqlCommand cmd = new SqlCommand(insertData, connection))
                         {
-                            cmd.Parameters.AddWithValue("@cover", pictureBox5.ImageLocation);
+                            cmd.Parameters.AddWithValue("@cover", imgURL);
                             cmd.Parameters.AddWithValue("@author", textBox2.Text.Trim());
                             cmd.Parameters.AddWithValue("@title", textBox1.Text.Trim());
                             cmd.Parameters.AddWithValue("@category", comboBox3.Text.Trim());
@@ -110,13 +129,42 @@ namespace Librarya
                     }
                     catch (Exception x)
                     {
-                        MessageBox.Show("Database error: \n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Database error: addForm.cs\n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
                         connection.Close();
                     }
                 }
+            }
+        }
+
+        // Imgur Upload class
+        private async Task<string> uploadImgAsync (string filePath)
+        {
+            string apiURL = "https://api.imgur.com/3/image";
+            using (HttpClient http = new HttpClient())
+            {
+                string clientID = loadSecrets();
+                http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Client-ID", clientID);
+
+                // Read image bytes
+                byte[] imgBytes = File.ReadAllBytes(filePath);
+
+                // Multiform data packup
+                using (MultipartFormDataContent content = new MultipartFormDataContent())
+                {
+                    content.Add(new ByteArrayContent(imgBytes), "image", Path.GetFileName(filePath));
+
+                    HttpResponseMessage response = await http.PostAsync(apiURL, content);
+                    response.EnsureSuccessStatusCode();
+
+                    // Parse to JSON and return link
+                    string jsonLink = await response.Content.ReadAsStringAsync();
+                    JObject data = JObject.Parse(jsonLink)["data"] as JObject;
+                    return data.Value<string>("link");
+                }
+
             }
         }
 
@@ -134,8 +182,7 @@ namespace Librarya
 
         private void backArrow_Click(object sender, EventArgs e)
         {
-            bookTable book = new bookTable();
-            book.Show();
+            new bookTable().Show();
             this.Hide();
         }
 
@@ -145,8 +192,7 @@ namespace Librarya
 
             if (logoutCheck == DialogResult.Yes)
             {
-                loginForm login = new loginForm();
-                login.Show();
+                new loginForm().Show();
                 this.Hide();
             }
         }
