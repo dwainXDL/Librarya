@@ -19,12 +19,7 @@ namespace Librarya
 {
     public partial class addForm : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
-
-        private string loadSecrets()
-        {
-            return File.ReadAllText(@"D:\Work\Uni\NSBM\C# Assignment\Librarya\Librarya\Librarya\Secrets\imgur.secret".Trim());
-        }
+        SqlConnection connection = new SqlConnection(session.connectionString);
 
         // Global image path
         private string imgPath = "";
@@ -148,7 +143,7 @@ namespace Librarya
             string apiURL = "https://api.imgur.com/3/image";
             using (HttpClient http = new HttpClient())
             {
-                string clientID = loadSecrets();
+                string clientID = session.loadSecrets();
                 http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Client-ID", clientID);
 
                 // Read image bytes

@@ -8,12 +8,13 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 using System.ComponentModel;
+using Librarya.Classes;
 
 namespace Librarya
 {
     internal class booksData
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection connection = new SqlConnection(session.connectionString);
 
         [DisplayName("Book ID")]
         public int bookID { set; get; }

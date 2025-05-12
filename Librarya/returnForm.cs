@@ -17,7 +17,7 @@ namespace Librarya
 {
     public partial class returnForm : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection connection = new SqlConnection(session.connectionString);
 
         public returnForm()
         {
@@ -308,6 +308,11 @@ namespace Librarya
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void returnForm_Load(object sender, EventArgs e)
         {
 
         }
