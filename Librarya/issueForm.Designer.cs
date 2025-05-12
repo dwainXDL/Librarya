@@ -150,7 +150,7 @@
             this.label10.Font = new System.Drawing.Font("Inknut Antiqua", 11.25F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(42, 453);
+            this.label10.Location = new System.Drawing.Point(174, 453);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 39);
             this.label10.TabIndex = 80;
@@ -163,7 +163,7 @@
             this.label9.Font = new System.Drawing.Font("Inknut Antiqua", 11.25F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(531, 453);
+            this.label9.Location = new System.Drawing.Point(661, 453);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 39);
             this.label9.TabIndex = 78;
@@ -221,7 +221,7 @@
             this.label5.Font = new System.Drawing.Font("Inknut Antiqua", 11.25F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(979, 97);
+            this.label5.Location = new System.Drawing.Point(1111, 97);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 39);
             this.label5.TabIndex = 72;
@@ -301,6 +301,7 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(315, 38);
             this.textBox3.TabIndex = 89;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox5
             // 
@@ -385,6 +386,7 @@
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(315, 38);
             this.textBox4.TabIndex = 91;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox5
             // 
@@ -397,6 +399,7 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(315, 38);
             this.textBox5.TabIndex = 92;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // timer1
             // 

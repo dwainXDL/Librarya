@@ -66,6 +66,7 @@
     <Compile Include="bookTable.Designer.cs">
       <DependentUpon>bookTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\detailData.cs" />
     <Compile Include="Classes\issuesData.cs" />
     <Compile Include="Classes\membersData.cs" />
     <Compile Include="Classes\returnsData.cs" />

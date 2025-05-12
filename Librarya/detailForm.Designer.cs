@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -37,16 +39,16 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.backArrow = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backArrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -67,7 +69,7 @@
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox2.Image = global::Librarya.Properties.Resources.minimize_removebg_preview1;
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(1275, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(1275, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -80,7 +82,7 @@
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox4.Image = global::Librarya.Properties.Resources.x_removebg_preview1;
             this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox4.Location = new System.Drawing.Point(1311, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(1311, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(39, 28);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,7 +97,7 @@
             this.label4.Font = new System.Drawing.Font("Inknut Antiqua", 14.25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(205, 5);
+            this.label4.Location = new System.Drawing.Point(207, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 49);
             this.label4.TabIndex = 48;
@@ -138,7 +140,7 @@
             this.label11.Font = new System.Drawing.Font("Inknut Antiqua", 11.25F);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(153, 119);
+            this.label11.Location = new System.Drawing.Point(160, 148);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 39);
             this.label11.TabIndex = 85;
@@ -146,27 +148,21 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(60, 172);
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(98)))), ((int)(((byte)(98)))));
+            this.pictureBox5.Location = new System.Drawing.Point(73, 199);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(245, 351);
+            this.pictureBox5.Size = new System.Drawing.Size(245, 361);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 84;
             this.pictureBox5.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(366, 94);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(929, 622);
-            this.dataGridView1.TabIndex = 86;
             // 
             // backArrow
             // 
             this.backArrow.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.backArrow.Image = global::Librarya.Properties.Resources.Screenshot_2025_05_04_073637_removebg_preview;
-            this.backArrow.Location = new System.Drawing.Point(-1, 770);
+            this.backArrow.Location = new System.Drawing.Point(-1, 748);
             this.backArrow.Name = "backArrow";
-            this.backArrow.Size = new System.Drawing.Size(34, 30);
+            this.backArrow.Size = new System.Drawing.Size(73, 52);
             this.backArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.backArrow.TabIndex = 87;
             this.backArrow.TabStop = false;
@@ -180,12 +176,52 @@
             this.button3.Font = new System.Drawing.Font("Inknut Antiqua", 8.25F);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(76, 591);
+            this.button3.Location = new System.Drawing.Point(113, 606);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(219, 77);
+            this.button3.Size = new System.Drawing.Size(167, 65);
             this.button3.TabIndex = 88;
             this.button3.Text = "Remove";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Inknut Antiqua", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Inknut Antiqua Medium", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.dataGridView1.Location = new System.Drawing.Point(388, 95);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView1.Size = new System.Drawing.Size(919, 622);
+            this.dataGridView1.TabIndex = 89;
             // 
             // detailForm
             // 
@@ -193,9 +229,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(177)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(1350, 800);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.backArrow);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label4);
@@ -213,8 +249,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backArrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,8 +267,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox backArrow;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -41,7 +41,7 @@ namespace Librarya
         private void timer1_Tick(object sender, EventArgs e)
         {
             // Button disable if not filled
-            if (string.IsNullOrEmpty(textBox5.Text) == true || textBox4.Text == "Not Available" || string.IsNullOrEmpty(textBox4.Text) == true)
+            if (string.IsNullOrEmpty(textBox1.Text) == true || textBox4.Text == "Not Available" || string.IsNullOrEmpty(textBox2.Text) == true)
             {
                 button1.Enabled = false;
             }
@@ -106,6 +106,7 @@ namespace Librarya
             textBox3.Text = "";
             textBox4.Text = "";
             pictureBox5.Image = null;
+            textBox5.Text = "";
         }
 
         // Clear button
@@ -202,7 +203,7 @@ namespace Librarya
                                 updateCmd.ExecuteNonQuery();
                             }
 
-                            MessageBox.Show("Book Issue Added Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Book Issued Added Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             clearField();
                         }

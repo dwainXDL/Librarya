@@ -213,7 +213,7 @@
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox2.Image = global::Librarya.Properties.Resources.minimize_removebg_preview1;
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(1276, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(1276, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -226,7 +226,7 @@
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.pictureBox4.Image = global::Librarya.Properties.Resources.x_removebg_preview1;
             this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox4.Location = new System.Drawing.Point(1312, 1);
+            this.pictureBox4.Location = new System.Drawing.Point(1312, 6);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(39, 28);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

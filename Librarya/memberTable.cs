@@ -60,7 +60,7 @@ namespace Librarya
 
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Deleted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Deleted Member Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             displayMembersData();
                         }
                     }

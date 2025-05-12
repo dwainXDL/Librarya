@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
@@ -44,6 +45,20 @@ namespace Librarya
             }
         }
 
+        // Detail button
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (bookID == 0)
+            {
+                MessageBox.Show("Select a book", "Info", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                new detailForm(bookID).Show();
+                this.Hide();
+            }
+        }
+
         // Remove button
         private void button2_Click(object sender, EventArgs e)
         {
@@ -68,7 +83,7 @@ namespace Librarya
 
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Deleted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Deleted Book Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             booksTable();
                         }
                     }

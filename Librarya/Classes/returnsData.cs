@@ -20,11 +20,11 @@ namespace Librarya.Classes
         [DisplayName("Member ID")]
         public int memberID { set; get; }
 
+        [DisplayName("Name")]
+        public string memberName { set; get; }
+
         [DisplayName("ISBN")]
         public string isbn { set; get; }
-
-        [DisplayName("Returned By")]
-        public string returnBy { set; get; }
 
         [DisplayName("Returned Date")]
         public string returnDate { set; get; }
@@ -56,11 +56,11 @@ namespace Librarya.Classes
                             returnsData db = new returnsData();
                             db.returnID = (int)reader["returnID"];
                             db.memberID = (int)reader["memberID"];
+                            db.memberName = reader["memberName"].ToString();
                             db.isbn = reader["isbn"].ToString();
-                            db.returnBy = reader["returnBy"].ToString();
                             db.returnDate = reader["returnDate"].ToString();
-                            db.remarks = reader["remarks"].ToString();
                             db.overdueBy = (int)reader["overdueBy"];
+                            db.remarks = reader["remarks"].ToString();
 
                             listData.Add(db);
                         }
