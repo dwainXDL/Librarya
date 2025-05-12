@@ -87,9 +87,9 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(14, 219);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 39);
+            this.label3.Size = new System.Drawing.Size(63, 39);
             this.label3.TabIndex = 17;
-            this.label3.Text = "NIC";
+            this.label3.Text = "NIC *";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox1
@@ -111,9 +111,9 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(12, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 39);
+            this.label2.Size = new System.Drawing.Size(79, 39);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Name";
+            this.label2.Text = "Name *";
             // 
             // backArrow
             // 
@@ -197,9 +197,9 @@
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label5.Location = new System.Drawing.Point(14, 291);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 39);
+            this.label5.Size = new System.Drawing.Size(80, 39);
             this.label5.TabIndex = 28;
-            this.label5.Text = "Email";
+            this.label5.Text = "Email *";
             // 
             // textBox3
             // 

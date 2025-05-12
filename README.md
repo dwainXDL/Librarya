@@ -18,3 +18,7 @@ A Library Management System for an assignment @NSBM Green University
 ```bash
   git clone https://github.com/dwainXDL/Librarya
 ```
+
+## Pre-requisites
+- Secrets
+- Database

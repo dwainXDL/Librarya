@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 // SQL requisites
 using System.Data.SqlClient;
+using Librarya.Classes;
 
 namespace Librarya
 {
@@ -17,7 +18,7 @@ namespace Librarya
     {
 
         // SQL connection 
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\perso\OneDrive\Documents\libraryaDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
 
         public memberRegister()
         {
@@ -28,7 +29,7 @@ namespace Librarya
         {
             if (textBox3.Text == "" || textBox1.Text == "" || textBox2.Text == "")
             {
-                MessageBox.Show("Fill all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Fill all required * fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
             else
             {
@@ -60,7 +61,7 @@ namespace Librarya
                                     enterFn.Parameters.AddWithValue("@name", textBox1.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@nic", textBox2.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@email", textBox3.Text.Trim());
-                                    enterFn.Parameters.AddWithValue("@phoneNo", textBox4.Text.Trim());
+                                    enterFn.Parameters.AddWithValue("@phoneNo", "+94 " + textBox4.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@dateRegistered", currentDate.ToString());
 
                                     if (textBox3.Text.Trim().Contains("@"))
@@ -80,7 +81,7 @@ namespace Librarya
                     }
                     catch(Exception x)
                     {
-                        MessageBox.Show("Connecting to database failed\n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Database error: memberRegister.cs\n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Console.WriteLine(x);
                     }
                     finally
@@ -94,8 +95,7 @@ namespace Librarya
         // Back arrow - to login form
         private void backArrow_Click(object sender, EventArgs e)
         {
-            loginForm login = new loginForm();
-            login.Show();
+            new memberTable().Show();
             this.Hide();
         }
 
@@ -132,6 +132,11 @@ namespace Librarya
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }
