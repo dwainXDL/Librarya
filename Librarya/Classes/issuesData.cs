@@ -67,8 +67,8 @@ namespace Librarya.Classes
                             db.issuedBy = reader["issuedBy"].ToString();
                             db.memberID = (int)reader["memberID"];
                             db.memberName = reader["memberName"].ToString();
-                            db.issueDate = reader["issueDate"].ToString();
-                            db.returnDate = reader["returnDate"].ToString();
+                            db.issueDate = reader.GetDateTime(reader.GetOrdinal("issueDate")).ToString("yyyy-MM-dd");
+                            db.returnDate = reader.GetDateTime(reader.GetOrdinal("returnDate")).ToString("yyyy-MM-dd");
                             db.remarks = reader["remarks"].ToString();
 
                             listData.Add(db);

@@ -73,6 +73,26 @@ namespace Librarya.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_user_icon_3296_thumb {
+            get {
+                object obj = ResourceManager.GetObject("free-user-icon-3296-thumb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imageedit_1_4474983070 {
+            get {
+                object obj = ResourceManager.GetObject("imageedit_1_4474983070", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imageedit_11_2751666342 {
             get {
                 object obj = ResourceManager.GetObject("imageedit_11_2751666342", resourceCulture);

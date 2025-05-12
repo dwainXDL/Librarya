@@ -205,7 +205,9 @@
     <None Include="Resources\imageedit_9_8942479594.png" />
     <None Include="Resources\imageedit_11_2751666342.png" />
     <Content Include="Logo.ico" />
+    <None Include="Resources\free-user-icon-3296-thumb.png" />
     <Content Include="Resources\Icon.ico" />
+    <None Include="Resources\imageedit_1_4474983070.png" />
     <Content Include="Resources\x-removebg-preview1.png" />
     <None Include="Resources\minimize-removebg-preview1.png" />
     <None Include="Resources\Screenshot_2025-05-04_073637-removebg-preview.png" />

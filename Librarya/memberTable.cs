@@ -21,6 +21,8 @@ namespace Librarya
             InitializeComponent();
 
             displayMembersData();
+
+            label5.Text = session.user;
         }
 
         // Global var
@@ -77,6 +79,38 @@ namespace Librarya
             dataGridView1.DataSource = listData;
         }
 
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToResizeRows = false;
+
+            // header styling
+            var headerStyle = dataGridView1.ColumnHeadersDefaultCellStyle;
+            headerStyle.BackColor = Color.FromArgb(92, 78, 78);
+            headerStyle.ForeColor = Color.FromArgb(232, 232, 232);
+            headerStyle.Font = new Font("Inknut Antiqua", 10F, FontStyle.Bold);
+            headerStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridView1.ColumnHeadersHeight = 50;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // column sizing
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dataGridView1.Columns["memberID"].Width = 125;
+            dataGridView1.Columns["name"].Width = 280;
+            dataGridView1.Columns["nic"].Width = 230;
+            dataGridView1.Columns["email"].Width = 325;
+            dataGridView1.Columns["phoneNo"].Width = 175;
+            dataGridView1.Columns["dateRegistered"].Width = 130;
+        }
+
         private void backArrow_Click(object sender, EventArgs e)
         {
             new homeForm().Show();
@@ -112,6 +146,11 @@ namespace Librarya
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

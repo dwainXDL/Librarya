@@ -57,7 +57,7 @@ namespace Librarya.Classes
                             db.nic = reader["nic"].ToString();
                             db.email = reader["email"].ToString();
                             db.phoneNo = reader["phoneNo"].ToString();
-                            db.dateRegistered = reader["dateRegistered"].ToString();
+                            db.dateRegistered = reader.GetDateTime(reader.GetOrdinal("dateRegistered")).ToString("yyyy-MM-dd");
 
                             listData.Add(db);
                         }

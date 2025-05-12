@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Librarya.Classes;
 
 namespace Librarya
 {
@@ -23,6 +24,9 @@ namespace Librarya
             bookCountLabel();
             issueCountLabel();
             memberCountLabel();
+            returnCountLabel();
+
+            label7.Text = session.user;
         }
 
         // Database record count updates
@@ -44,7 +48,7 @@ namespace Librarya
                 }
                 catch (Exception x)
                 {
-                    MessageBox.Show("Database error: \n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Database error: homeForm.cs\n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -71,7 +75,7 @@ namespace Librarya
                 }
                 catch (Exception x)
                 {
-                    MessageBox.Show("Database error: \n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Database error: homeForm.cs\n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -94,6 +98,33 @@ namespace Librarya
                     {
                         int count = (int)cmd.ExecuteScalar();
                         label6.Text = count.ToString();
+                    }
+                }
+                catch (Exception x)
+                {
+                    MessageBox.Show("Database error: homeForm.cs\n\n" + "Message:\n" + x, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+        }
+
+        private void returnCountLabel()
+        {
+            string countData = "SELECT COUNT(*) FROM returns";
+
+            if (connection.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand cmd = new SqlCommand(countData, connection))
+                    {
+                        int count = (int)cmd.ExecuteScalar();
+                        label3.Text = count.ToString();
                     }
                 }
                 catch (Exception x)
@@ -207,6 +238,11 @@ namespace Librarya
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

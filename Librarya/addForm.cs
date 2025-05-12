@@ -13,6 +13,7 @@ using Newtonsoft.Json.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.IO;
+using Librarya.Classes;
 
 namespace Librarya
 {
@@ -32,6 +33,8 @@ namespace Librarya
         public addForm()
         {
             InitializeComponent();
+
+            label9.Text = session.user;
         }
 
         //// Parsing text fields
@@ -208,6 +211,11 @@ namespace Librarya
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Librarya.Classes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Librarya
@@ -24,6 +25,8 @@ namespace Librarya
 
             // On run load table
             booksTable();
+
+            label5.Text = session.user;
         }
 
         // Global variables
@@ -96,15 +99,42 @@ namespace Librarya
             List<booksData> dataList = db.addBooksData();
 
             dataGridView1.DataSource = dataList;
+        }
 
-            // Column resizing
-            dataGridView1.Columns["bookID"].Width = 100;
+        // Table changes
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleVertical;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToResizeRows = false;
+
+            // header styling
+            var headerStyle = dataGridView1.ColumnHeadersDefaultCellStyle;
+            headerStyle.BackColor = Color.FromArgb(92, 78, 78);  
+            headerStyle.ForeColor = Color.FromArgb(232,232,232);
+            headerStyle.Font = new Font("Inknut Antiqua", 10F, FontStyle.Bold);
+            headerStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridView1.ColumnHeadersHeight = 50;
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
+
+            // column sizing
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            dataGridView1.Columns["bookID"].Width = 85;
             dataGridView1.Columns["cover"].Width = 175;
-            dataGridView1.Columns["title"].Width = 325;
-            dataGridView1.Columns["author"].Width = 250;
+            dataGridView1.Columns["title"].Width = 350;
+            dataGridView1.Columns["author"].Width = 180;
             dataGridView1.Columns["language"].Width = 125;
-            dataGridView1.Columns["category"].Width = 175;
-            dataGridView1.Columns["availability"].Width = 125;
+            dataGridView1.Columns["category"].Width = 220;
+            dataGridView1.Columns["availability"].Width = 130;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -159,6 +189,11 @@ namespace Librarya
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 // SQL requisites
 using System.Data.SqlClient;
+using Librarya.Classes;
 
 namespace Librarya
 {
@@ -60,7 +61,7 @@ namespace Librarya
                                     enterFn.Parameters.AddWithValue("@name", textBox1.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@nic", textBox2.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@email", textBox3.Text.Trim());
-                                    enterFn.Parameters.AddWithValue("@phoneNo", textBox4.Text.Trim());
+                                    enterFn.Parameters.AddWithValue("@phoneNo", "+94 " + textBox4.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@dateRegistered", currentDate.ToString());
 
                                     if (textBox3.Text.Trim().Contains("@"))
@@ -131,6 +132,11 @@ namespace Librarya
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

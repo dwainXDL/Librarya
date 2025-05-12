@@ -24,11 +24,15 @@ namespace Librarya
             InitializeComponent();
 
             timer1.Start();
+
+            // Set variables
+            label5.Text = session.user;
         }
 
         // Global variables
         DateTime issueReturnDate;
         DateTime today = DateTime.Today;
+        private int daysDifference = 0;
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
@@ -206,7 +210,7 @@ namespace Librarya
                             cmd.Parameters.AddWithValue("@isbn", textBox2.Text.Trim());
                             cmd.Parameters.AddWithValue("@returnDate", today.ToString("yyyy-MM-dd"));
                             cmd.Parameters.AddWithValue("@remarks", textBox8.Text.Trim());
-                            cmd.Parameters.AddWithValue("@overdueBy", textBox2.Text.Trim());
+                            cmd.Parameters.AddWithValue("@overdueBy", daysDifference);
                             cmd.Parameters.AddWithValue("@returnBy", session.user);
                             cmd.Parameters.AddWithValue("@memberName", textBox6.Text.Trim());
 
@@ -221,7 +225,7 @@ namespace Librarya
                                 updateCmd.ExecuteNonQuery();
                             }
 
-                            MessageBox.Show("Book Returned Added Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Book Returned Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             clearField();
                         }
@@ -299,6 +303,11 @@ namespace Librarya
         }
 
         private void label8_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

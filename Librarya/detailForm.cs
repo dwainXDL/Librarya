@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Librarya.Classes;
 
 namespace Librarya
 {
@@ -21,6 +22,8 @@ namespace Librarya
 
             // Passed variables
             this.bookID = bookID;
+
+            label5.Text = session.user;
         }
 
         // Global var
@@ -30,16 +33,41 @@ namespace Librarya
         private void loadBookDetails(int bookID)
         {
             Librarya.Classes.getDetailData detailLoader = new Librarya.Classes.getDetailData();
+
             DataTable dataDetail = detailLoader.detailTable(bookID);
             string coverURL = detailLoader.coverURL;
 
             dataGridView1.DataSource = dataDetail;
             pictureBox5.LoadAsync(coverURL);
+        }
 
-            dataGridView1.ColumnHeadersVisible = false;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.Columns[0].Width = 120;
-            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                dataGridView1.Columns[0].Width = 125;
+                dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+                dataGridView1.Columns[0].DefaultCellStyle.Font = new Font("Inknut Antiqua", 10F, FontStyle.Bold);
+
+                dataGridView1.Columns[1].DefaultCellStyle.Font = new Font("Inknut Antiqua", 10F, FontStyle.Regular);
+
+                string rowName = row.Cells[0].Value?.ToString();
+                switch (rowName)
+                {
+                    case "Description":
+                        row.Height = 150;
+                        break;
+
+                    case "Published Year":
+                        row.Height = 70;
+                        break;
+
+                    default:
+                        row.Height = 50;
+                        break;
+                }
+            }
         }
 
         // Remove button
@@ -73,6 +101,11 @@ namespace Librarya
         {
             new bookTable().Show();
             this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -58,7 +58,7 @@ namespace Librarya.Classes
                             db.memberID = (int)reader["memberID"];
                             db.memberName = reader["memberName"].ToString();
                             db.isbn = reader["isbn"].ToString();
-                            db.returnDate = reader["returnDate"].ToString();
+                            db.returnDate = reader.GetDateTime(reader.GetOrdinal("returnDate")).ToString("yyyy-MM-dd");
                             db.overdueBy = (int)reader["overdueBy"];
                             db.remarks = reader["remarks"].ToString();
 

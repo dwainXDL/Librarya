@@ -24,6 +24,8 @@ namespace Librarya
             InitializeComponent();
 
             timer1.Start();
+
+            label12.Text = session.user;
         }
 
         // Global var
@@ -248,6 +250,11 @@ namespace Librarya
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }
