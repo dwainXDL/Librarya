@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="Classes\issuesData.cs" />
     <Compile Include="Classes\membersData.cs" />
+    <Compile Include="Classes\returnsData.cs" />
     <Compile Include="Classes\session.cs" />
     <Compile Include="detailForm.cs">
       <SubType>Form</SubType>
