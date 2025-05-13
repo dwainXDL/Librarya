@@ -41,8 +41,11 @@ namespace Librarya
             {
                 timer.Stop();
 
-                loginForm login = new loginForm();
-                login.Show();
+                //loginForm login = new loginForm();
+                //login.Show();
+                //this.Hide();
+
+                new loginForm().Show();
                 this.Hide();
             }
 

@@ -43,6 +43,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -93,7 +94,7 @@
             this.button1.Font = new System.Drawing.Font("Inknut Antiqua", 8.25F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(929, 699);
+            this.button1.Location = new System.Drawing.Point(718, 699);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(167, 65);
             this.button1.TabIndex = 59;
@@ -244,12 +245,29 @@
             this.label5.Text = "User";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.PanNorth;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Inknut Antiqua", 8.25F);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button3.Location = new System.Drawing.Point(930, 699);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(167, 65);
+            this.button3.TabIndex = 101;
+            this.button3.Text = "Stats";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // issueTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(177)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(1350, 800);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
@@ -294,5 +312,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button3;
     }
 }
