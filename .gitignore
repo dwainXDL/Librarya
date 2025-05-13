@@ -364,3 +364,4 @@ FodyWeavers.xsd
 
 # Client Secrets
 imgur.secret
+mail.secret
