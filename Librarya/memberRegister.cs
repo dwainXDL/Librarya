@@ -70,7 +70,9 @@ namespace Librarya
                                     if (textBox3.Text.Trim().Contains("@"))
                                     {
                                         enterFn.ExecuteNonQuery();
+                                        clearField();
                                         MessageBox.Show("Added Member Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        
                                     }
                                     else
                                     {
@@ -93,6 +95,14 @@ namespace Librarya
                     }
                 }
             }
+        }
+
+        public void clearField()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
         }
 
         // Back arrow - to login form
