@@ -17,7 +17,7 @@ namespace Librarya
 {
     public partial class returnForm : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection connection = new SqlConnection(session.connectionString);
 
         public returnForm()
         {
@@ -33,6 +33,7 @@ namespace Librarya
         DateTime issueReturnDate;
         DateTime today = DateTime.Today;
         private int daysDifference = 0;
+        int issueID;
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
@@ -65,6 +66,8 @@ namespace Librarya
                             // ISBN not found
                             textBox2.Clear();
                             MessageBox.Show($"Book was not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                            
                         }
                     }
                 }
@@ -81,7 +84,8 @@ namespace Librarya
             try
             {
                 // Selecing data from issues table
-                string issueData = "SELECT returnDate FROM issues WHERE isbn = @isbn";
+                // string previousIssue = "SELECT returnDate, issueID FROM issues WHERE isbn = @isbn";
+                string issueData = "SELECT i.returnDate, i.issueID FROM dbo.issues AS i INNER JOIN dbo.books AS b ON i.bookID = b.bookID WHERE b.isbn = @isbn AND b.availability = N'Not Available'";
                 using (SqlCommand cmd = new SqlCommand(issueData, connection))
                 {
                     connection.Open();
@@ -90,17 +94,19 @@ namespace Librarya
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
+
                         if (reader.Read())
                         {
                             // Fill your fields
                             issueReturnDate = reader.GetDateTime(reader.GetOrdinal("returnDate"));
-
+                            issueID = (int)reader["issueID"];
                         }
                         else
                         {
                             // ISBN not found
-                            textBox2.Clear();
-                            MessageBox.Show($"Book was not issued", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearField();
+                            MessageBox.Show($"Book is not currently issued", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
                         }
                     }
                 }
@@ -172,6 +178,7 @@ namespace Librarya
                         {
                             // Member not found
                             textBox1.Clear();
+                            textBox6.Text = "";
                             MessageBox.Show($"Member '{memberID}' not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
@@ -308,6 +315,11 @@ namespace Librarya
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void returnForm_Load(object sender, EventArgs e)
         {
 
         }

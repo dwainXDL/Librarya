@@ -13,7 +13,7 @@ namespace Librarya.Classes
 {
     internal class issuesData
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection connection = new SqlConnection(session.connectionString);
 
         [DisplayName("Issue ID")]
         public int issueID { set; get; }

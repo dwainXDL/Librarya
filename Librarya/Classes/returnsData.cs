@@ -12,7 +12,7 @@ namespace Librarya.Classes
 {
     internal class returnsData
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection connection = new SqlConnection(session.connectionString);
 
         [DisplayName("Return ID")]
         public int returnID { set; get; }

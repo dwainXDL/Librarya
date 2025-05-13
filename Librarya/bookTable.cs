@@ -17,7 +17,7 @@ namespace Librarya
 {
     public partial class bookTable : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection connection = new SqlConnection(session.connectionString);
 
         public bookTable()
         {

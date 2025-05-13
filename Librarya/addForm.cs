@@ -19,12 +19,7 @@ namespace Librarya
 {
     public partial class addForm : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
-
-        private string loadSecrets()
-        {
-            return File.ReadAllText(@"D:\Work\Uni\NSBM\C# Assignment\Librarya\Librarya\Librarya\Secrets\imgur.secret".Trim());
-        }
+        SqlConnection connection = new SqlConnection(session.connectionString);
 
         // Global image path
         private string imgPath = "";
@@ -35,6 +30,9 @@ namespace Librarya
             InitializeComponent();
 
             label9.Text = session.user;
+
+            var secrets = session.loadSecrets(@"D:\Work\Uni\NSBM\C# Assignment\Librarya\Librarya\Librarya\Secrets\imgur.secret");
+            session.clientID = secrets["IMGUR_CLIENT_ID"];
         }
 
         //// Parsing text fields
@@ -148,8 +146,7 @@ namespace Librarya
             string apiURL = "https://api.imgur.com/3/image";
             using (HttpClient http = new HttpClient())
             {
-                string clientID = loadSecrets();
-                http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Client-ID", clientID);
+                http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Client-ID", session.clientID);
 
                 // Read image bytes
                 byte[] imgBytes = File.ReadAllBytes(filePath);
@@ -216,6 +213,11 @@ namespace Librarya
         }
 
         private void label9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

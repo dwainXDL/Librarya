@@ -18,7 +18,7 @@ namespace Librarya
     {
 
         // SQL connection 
-        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection connection = new SqlConnection(session.connectionString);
 
         public memberRegister()
         {
@@ -61,13 +61,18 @@ namespace Librarya
                                     enterFn.Parameters.AddWithValue("@name", textBox1.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@nic", textBox2.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@email", textBox3.Text.Trim());
-                                    enterFn.Parameters.AddWithValue("@phoneNo", "+94 " + textBox4.Text.Trim());
+                                    if (textBox4.Text != "")
+                                    {
+                                        enterFn.Parameters.AddWithValue("@phoneNo", "+94 " + textBox4.Text.Trim());
+                                    }
                                     enterFn.Parameters.AddWithValue("@dateRegistered", currentDate.ToString());
 
                                     if (textBox3.Text.Trim().Contains("@"))
                                     {
                                         enterFn.ExecuteNonQuery();
+                                        clearField();
                                         MessageBox.Show("Added Member Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        
                                     }
                                     else
                                     {
@@ -90,6 +95,14 @@ namespace Librarya
                     }
                 }
             }
+        }
+
+        public void clearField()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
         }
 
         // Back arrow - to login form

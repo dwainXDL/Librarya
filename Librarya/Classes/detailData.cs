@@ -13,7 +13,7 @@ namespace Librarya.Classes
 {
     internal class getDetailData
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=C:\USERS\PERSO\ONEDRIVE\DOCUMENTS\LIBRARYADB.MDF;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection connection = new SqlConnection(session.connectionString);
 
         public string coverURL { get; set; }
 
@@ -48,7 +48,7 @@ namespace Librarya.Classes
                                 db.Rows.Add("Availability", reader["availability"].ToString());
                                 db.Rows.Add("Published Year", reader["publishedYear"].ToString());
                                 db.Rows.Add("Description", reader["description"].ToString());
-                                db.Rows.Add("Date Added", reader["dateAdded"].ToString());
+                                db.Rows.Add("Date Added", reader.GetDateTime(reader.GetOrdinal("dateAdded")).ToString("yyyy-MM-dd"));
                                 coverURL = reader["cover"].ToString();
                             }
 
