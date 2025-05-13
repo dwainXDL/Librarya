@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Librarya.Classes;
+using BCrypt.Net;
 
 namespace Librarya
 {
@@ -20,6 +21,9 @@ namespace Librarya
         {
             InitializeComponent();
         }
+
+        // Global var
+        string storeHash;
 
         // Only letters and backspace allowed
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -45,18 +49,32 @@ namespace Librarya
                     {
                         connection.Open();
 
-                        String userData = "SELECT * FROM users WHERE username = @username AND password = @password";
+                        String userData = "SELECT password FROM users WHERE username = @username";
 
                         using(SqlCommand dataCMD = new SqlCommand(userData, connection))
                         {
                             dataCMD.Parameters.AddWithValue("@username", textBox1.Text.Trim());
-                            dataCMD.Parameters.AddWithValue("@password", textBox2.Text.Trim());
 
-                            SqlDataAdapter adapter = new SqlDataAdapter(dataCMD);
-                            DataTable tempTable = new DataTable();
-                            adapter.Fill(tempTable);
+                            // To check if object received is null
+                            var dataPull = dataCMD.ExecuteScalar();
 
-                            if(tempTable.Rows.Count == 1)
+                            if (dataPull == null)
+                            {
+                                MessageBox.Show("Incorrect username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+                            
+                            storeHash = dataPull.ToString();
+                            string entPass = textBox2.Text.Trim();
+
+                            // Verifying hash
+                            bool passMatch = BCrypt.Net.BCrypt.Verify(entPass, storeHash);
+
+                            //SqlDataAdapter adapter = new SqlDataAdapter(dataCMD);
+                            //DataTable tempTable = new DataTable();
+                            //// adapter.Fill(tempTable);
+
+                            if(passMatch)
                             {
                                 MessageBox.Show("Login Successful!\n\n" + "Welcome!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -65,10 +83,6 @@ namespace Librarya
                                 homeForm home = new homeForm();
                                 home.Show();
                                 this.Hide();
-                            }
-                            else if (tempTable.Rows.Count > 1)
-                            {
-                                MessageBox.Show("Many users with similar info \n\n" + "Database Error!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {

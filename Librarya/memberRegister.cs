@@ -61,7 +61,10 @@ namespace Librarya
                                     enterFn.Parameters.AddWithValue("@name", textBox1.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@nic", textBox2.Text.Trim());
                                     enterFn.Parameters.AddWithValue("@email", textBox3.Text.Trim());
-                                    enterFn.Parameters.AddWithValue("@phoneNo", "+94 " + textBox4.Text.Trim());
+                                    if (textBox4.Text != "")
+                                    {
+                                        enterFn.Parameters.AddWithValue("@phoneNo", "+94 " + textBox4.Text.Trim());
+                                    }
                                     enterFn.Parameters.AddWithValue("@dateRegistered", currentDate.ToString());
 
                                     if (textBox3.Text.Trim().Contains("@"))

@@ -65,6 +65,8 @@ namespace Librarya
                             // ISBN not found
                             textBox2.Clear();
                             MessageBox.Show($"Book was not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                            
                         }
                     }
                 }
@@ -99,7 +101,7 @@ namespace Librarya
                         else
                         {
                             // ISBN not found
-                            textBox2.Clear();
+                            clearField();
                             MessageBox.Show($"Book was not issued", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
@@ -172,6 +174,7 @@ namespace Librarya
                         {
                             // Member not found
                             textBox1.Clear();
+                            textBox6.Text = "";
                             MessageBox.Show($"Member '{memberID}' not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
