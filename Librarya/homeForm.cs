@@ -18,6 +18,18 @@ namespace Librarya
 
         public homeForm()
         {
+            // Mail service secrets load
+            Dictionary<string, string> secrets = session.loadSecrets(@"D:\Work\Uni\NSBM\C# Assignment\Librarya\Librarya\Librarya\Secrets\mail.secret");
+            session.emailSender = secrets["EMAIL_SENDER"];
+            session.apiKey = secrets["MJ_APIKEY_PUBLIC"];
+            session.apiSecret = secrets["MJ_APIKEY_PRIVATE"];
+
+            overdueNotice overdueNote = new overdueNotice();
+            overdueNote.overdueMails(12, 0);
+
+            // Mail test
+            overdueNote.sendOverdueNotice();
+
             InitializeComponent();
 
             // On run

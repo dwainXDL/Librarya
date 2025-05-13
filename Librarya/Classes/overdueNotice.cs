@@ -77,7 +77,7 @@ namespace Librarya.Classes
                                 $"Dear {name},<br><br>" +
                                 $"The book “<b>{title}</b>” is due <b>Tomorrow</b>.<br><br>" +
                                 $"Please do return it at your earliest convenience. " +
-                                $"Failing to do so may result in <b>fine</b>.<br><br>" +
+                                $"Failing to do so may result in a <b>fine</b>.<br><br>" +
                                 "Thank you,<br>" +
                                 "Librarya";
 

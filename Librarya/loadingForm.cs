@@ -17,18 +17,6 @@ namespace Librarya
     {
         public loadingForm()
         {
-            // Mail service secrets load
-            Dictionary<string, string> secrets = session.loadSecrets(@"D:\Work\Uni\NSBM\C# Assignment\Librarya\Librarya\Librarya\Secrets\mail.secret");
-            session.emailSender = secrets["EMAIL_SENDER"];
-            session.apiKey = secrets["MJ_APIKEY_PUBLIC"];
-            session.apiSecret = secrets["MJ_APIKEY_PRIVATE"];
-
-            overdueNotice overdueNote = new overdueNotice();
-            overdueNote.overdueMails(12, 0);
-
-            // Mail test
-            //overdueNote.sendOverdueNotice();
-
             InitializeComponent();
 
         }
@@ -41,8 +29,11 @@ namespace Librarya
             {
                 timer.Stop();
 
-                loginForm login = new loginForm();
-                login.Show();
+                //loginForm login = new loginForm();
+                //login.Show();
+                //this.Hide();
+
+                new loginForm().Show();
                 this.Hide();
             }
 
@@ -62,16 +53,6 @@ namespace Librarya
             panel1.Region = new Region(path);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -80,6 +61,16 @@ namespace Librarya
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
