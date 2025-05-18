@@ -21,6 +21,7 @@ namespace Librarya
 
         }
 
+        // timer increasing width
         private void timer1_Tick(object sender, EventArgs e)
         {
             loadingBar.Width += 5;
@@ -33,6 +34,7 @@ namespace Librarya
                 //login.Show();
                 //this.Hide();
 
+                // show login form and hid loading
                 new loginForm().Show();
                 this.Hide();
             }
@@ -69,6 +71,11 @@ namespace Librarya
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

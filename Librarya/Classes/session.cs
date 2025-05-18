@@ -12,7 +12,7 @@ namespace Librarya.Classes
     {
         public static string user { get; set; }
         
-        public static string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=libraryaDB;Integrated Security=True;TrustServerCertificate=True";
+        public static string connectionString = @"Server=tcp:libraryadb-server.database.windows.net,1433;Initial Catalog=libraryaDB;Persist Security Info=False;User ID=admin-librarya;Password=hbuvoc%qAqB@32;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;".Trim();
 
         // API Keys
         public static Dictionary<string, string> loadSecrets(string path)

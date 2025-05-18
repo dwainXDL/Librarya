@@ -42,16 +42,19 @@ namespace Librarya
             stats.renderEmptyChart(plotView1);
         }
 
+        // View weekly button
         private void button2_Click_1(object sender, EventArgs e)
         {
             showWeeklyChart();
         }
 
+        // View category button
         private void button1_Click_1(object sender, EventArgs e)
         {
             showCategoryChart();
         }
 
+        // load category chart on load
         private void statsForm_Load(object sender, EventArgs e)
         {
             showCategoryChart();
